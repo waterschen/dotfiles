@@ -11,8 +11,9 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
+		--exclude "plugins" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	rsync -avh --no-perms plugins $ZSH/custom;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
