@@ -382,6 +382,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " => vim-commentary
+" Use `gc` to comment/uncomment selected code lines.
 autocmd FileType c,cpp,java setlocal commentstring=//\ %s
 
 " => youcompleteme
