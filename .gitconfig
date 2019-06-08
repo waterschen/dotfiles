@@ -186,7 +186,6 @@
 
 	insteadOf = "gist:"
 
-[user]
+[include]
 
-	name = waterschen
-	email = qinshui.c@gmail.com
+    path = .gitextra
