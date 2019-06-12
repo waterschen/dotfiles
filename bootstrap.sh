@@ -3,6 +3,7 @@
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
+git submodule update --init --recursive;
 
 function doIt() {
 	rsync --exclude ".git/" \
@@ -14,7 +15,14 @@ function doIt() {
 		--exclude "LICENSE-MIT.txt" \
 		--exclude "plugins" \
 		-avh --no-perms . ~;
-	rsync -avh --no-perms plugins $ZSH/custom;
+	rsync --exclude ".git/" \
+		--exclude ".DS_Store" \
+		--exclude ".osx" \
+		--exclude "bootstrap.sh" \
+		--exclude "brew.sh" \
+		--exclude "README.md" \
+		--exclude "LICENSE-MIT.txt" \
+		-avh --no-perms plugins $ZSH/custom;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

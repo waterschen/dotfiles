@@ -62,14 +62,15 @@ plugins=(
     git-extras
     golang
     osx
-    zsh-autosuggestions
     zsh_reload
 
     # custom plugins
+    zsh-autosuggestions
     zsh-syntax-highlighting
     myalias
     myfunctions
-    vagrant
+    mydocker
+    myvagrant
 )
 
 source $ZSH/oh-my-zsh.sh

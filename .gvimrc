@@ -3,4 +3,4 @@ set guifont=Fira\ Code:h14
 " Don’t blink cursor in normal mode
 set guicursor=n:blinkon0
 " Better line-height
-set linespace=4
+" set linespace=4

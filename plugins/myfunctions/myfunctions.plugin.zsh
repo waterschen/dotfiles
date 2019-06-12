@@ -1,3 +1,6 @@
+# edit this file
+alias myfunctions="vim $ZSH/custom/plugins/myfunctions/myfunctions.plugin.zsh"
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
