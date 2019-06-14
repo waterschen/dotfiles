@@ -53,7 +53,7 @@ export UPDATE_ZSH_DAYS=7
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    # oh-my-zsh plugins
+    # Plugins provided by oh-my-zsh
     brew
     docker
     docker-compose
@@ -63,10 +63,18 @@ plugins=(
     golang
     osx
     zsh_reload
+    
+    # Also provide by oh-my-zsh, but need to `brew install` first.
+    autojump
+    fzf
+    thefuck
+    fd
 
-    # custom plugins
+    # Third plugins as GIT submodules placed in $ZSH/custom/plugin.
     zsh-autosuggestions
     zsh-syntax-highlighting
+
+    # My custom plugins
     myalias
     myfunctions
     mydocker
@@ -111,6 +119,18 @@ if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completi
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
+
+# Use fd (https://github.com/sharkdp/fd) instead of the default find
+# command for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
