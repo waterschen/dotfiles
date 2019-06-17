@@ -7,8 +7,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="agnoster"
-ZSH_THEME="" # disabled for pure prompt
+# Disable oh-my-zsh themes, using `pure prompt` instead.
+# See https://github.com/sindresorhus/pure
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -84,6 +85,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # pure prompt must be activated after `source $ZSH/oh-my-zsh.sh`
+# See https://github.com/sindresorhus/pure
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -112,13 +114,13 @@ alias zshconfig="vim ~/.zshrc"
 export PATH="$HOME/bin:$PATH";
 
 # Add tab completion for many Bash commands
-if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
-	# Ensure existing Homebrew v1 completions continue to work
-	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d";
-	source "$(brew --prefix)/etc/profile.d/bash_completion.sh";
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
-fi;
+# if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
+# 	# Ensure existing Homebrew v1 completions continue to work
+# 	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d";
+# 	source "$(brew --prefix)/etc/profile.d/bash_completion.sh";
+# elif [ -f /etc/bash_completion ]; then
+# 	source /etc/bash_completion;
+# fi;
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
