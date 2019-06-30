@@ -24,6 +24,7 @@ The following plugins don't come with `oh-my-zsh`, just use [Homebrew](https://b
 * [fzf](https://github.com/junegunn/fzf)
 * [thefuck](https://github.com/nvbn/thefuck)
 * [fd](https://github.com/sharkdp/fd)
+* [exa](https://github.com/ogham/exa)
 
 My favorite font for iTerm2, vim and MacVim:
 

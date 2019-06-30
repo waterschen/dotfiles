@@ -80,6 +80,7 @@ plugins=(
     myfunctions
     mydocker
     myvagrant
+    exa-aliases
 )
 
 source $ZSH/oh-my-zsh.sh
