@@ -39,7 +39,7 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
-alias sl="command ls ${colorflag}" # `ls` typo
+alias sl="ls" # `ls` typo
 
 # Show hidden files
 alias ldot="ls ${colorflag} -d .*"

@@ -392,8 +392,9 @@ let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
 
 " => fzf
-nmap <Leader>f :Files<cr>
-nmap <Leader>h :History<cr>
+nmap <C-p> :Files<CR>
+nmap <C-e> :Buffers<CR>
+let g:fzf_action = { 'ctrl-e': 'edit' }
 
 " => vim-go
 map <C-n> :cnext<CR>
