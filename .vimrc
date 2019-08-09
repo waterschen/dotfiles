@@ -91,7 +91,7 @@ set autowrite
 syntax enable    " Enable syntax highlighting
 
 set so=7         " 7 lines to the cursor
-set cmdheight=2  " Height of the command bar
+set cmdheight=1  " Height of the command bar
 
 set ruler        " Always show current position
 set number       " Always show line number
@@ -110,6 +110,7 @@ set background=dark
 " Set extra options when running in GUI mode
 if has("gui_running")
     set background=light
+    set cmdheight=2
     set guioptions-=T
     set guioptions-=e
     set t_Co=256
