@@ -64,6 +64,7 @@ plugins=(
     golang
     osx
     zsh_reload
+    history-substring-search
     
     # Also provide by oh-my-zsh, but need to `brew install` first.
     autojump
@@ -113,6 +114,11 @@ alias zshconfig="vim ~/.zshrc"
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+
+# bind UP and DOWN arrow keys (compatibility fallback
+# for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # Add tab completion for many Bash commands
 # if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
