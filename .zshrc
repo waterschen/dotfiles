@@ -79,6 +79,7 @@ plugins=(
     # My custom plugins
     myalias
     myfunctions
+    myfzf
     mydocker
     myvagrant
     exa-aliases
