@@ -1,6 +1,11 @@
 # Some useful fzf scripts
 # See: https://github.com/junegunn/fzf/wiki/examples
 
+
+# ==================================================
+#                    General
+# ==================================================
+
 # Use fd and fzf to get the args to a command.
 # Works only with zsh
 # Examples:
@@ -36,6 +41,10 @@ ec () {
 }
 
 
+# ==================================================
+#                 Opening files
+# ==================================================
+
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)
 #   - Exit if there's no match (--exit-0)
@@ -59,19 +68,19 @@ fo() {
 }
 
 
-# cdf - cd into the directory of the selected file
-cdf() {
-    local file
-    local dir
-    file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
-}
-
+# ==================================================
+#                 Command history
+# ==================================================
 
 # fh - repeat history
 fh() {
     print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -r 's/ *[0-9]*\*? *//' | sed -r 's/\\/\\\\/g')
 }
 
+
+# ==================================================
+#                    Processes
+# ==================================================
 
 # fkill - kill processes - list only the ones you can kill. Modified the earlier script.
 fkill() {
