@@ -83,6 +83,7 @@ plugins=(
     mydocker
     myvagrant
     exa-aliases
+    zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh

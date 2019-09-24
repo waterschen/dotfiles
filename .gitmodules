@@ -4,3 +4,6 @@
 [submodule "plugins/zsh-autosuggestions"]
 	path = plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "plugins/zsh-interactive-cd"]
+	path = plugins/zsh-interactive-cd
+	url = https://github.com/changyuheng/zsh-interactive-cd.git
