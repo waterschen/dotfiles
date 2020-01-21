@@ -156,3 +156,7 @@ function roll() {
         *) echo "'$1' is not a valid archive type"
     esac
 }
+
+function pps() {
+    ps -ef | grep "$@" | grep -v "grep"
+}
