@@ -11,6 +11,7 @@ alias -- -="cd -"
 
 # Need confirm to override file of the same name
 alias cp='cp -i'
+alias mv='mv -i'
 
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
